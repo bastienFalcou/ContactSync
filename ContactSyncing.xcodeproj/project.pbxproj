@@ -100,8 +100,8 @@
 				0C9B5B4D1E1FA80F00F7EF7A /* AppDelegate.swift */,
 				0C9B5B4F1E1FA80F00F7EF7A /* ViewController.swift */,
 				0C9B5B511E1FA80F00F7EF7A /* Main.storyboard */,
-				0C9B5B541E1FA80F00F7EF7A /* Assets.xcassets */,
 				0C9B5B561E1FA80F00F7EF7A /* LaunchScreen.storyboard */,
+				0C9B5B541E1FA80F00F7EF7A /* Assets.xcassets */,
 				0C9B5B591E1FA80F00F7EF7A /* Info.plist */,
 			);
 			path = ContactSyncing;
@@ -358,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -402,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -514,6 +514,7 @@
 				0C9B5B741E1FA81000F7EF7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C9B5B751E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "ContactSyncingTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +523,7 @@
 				0C9B5B771E1FA81000F7EF7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C9B5B781E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "ContactSyncingUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +532,7 @@
 				0C9B5B7A1E1FA81000F7EF7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
