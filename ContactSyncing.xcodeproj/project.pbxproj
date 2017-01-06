@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C6638A41E1FEA57003C1008 /* DataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6638981E1FEA48003C1008 /* DataSource.framework */; };
+		0C6638A51E1FEA57003C1008 /* DataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6638981E1FEA48003C1008 /* DataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6638A61E1FEA57003C1008 /* EthanolContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6638991E1FEA48003C1008 /* EthanolContacts.framework */; };
+		0C6638A71E1FEA57003C1008 /* EthanolContacts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6638991E1FEA48003C1008 /* EthanolContacts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6638A81E1FEA57003C1008 /* EthanolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389A1E1FEA48003C1008 /* EthanolUtilities.framework */; };
+		0C6638A91E1FEA57003C1008 /* EthanolUtilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389A1E1FEA48003C1008 /* EthanolUtilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6638AA1E1FEA57003C1008 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389B1E1FEA48003C1008 /* ReactiveCocoa.framework */; };
+		0C6638AB1E1FEA57003C1008 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389B1E1FEA48003C1008 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6638AC1E1FEA57003C1008 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389C1E1FEA48003C1008 /* ReactiveSwift.framework */; };
+		0C6638AD1E1FEA57003C1008 /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389C1E1FEA48003C1008 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6638AE1E1FEA57003C1008 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389D1E1FEA48003C1008 /* Result.framework */; };
+		0C6638AF1E1FEA57003C1008 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389D1E1FEA48003C1008 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C9B5B4E1E1FA80F00F7EF7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B5B4D1E1FA80F00F7EF7A /* AppDelegate.swift */; };
 		0C9B5B501E1FA80F00F7EF7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B5B4F1E1FA80F00F7EF7A /* ViewController.swift */; };
 		0C9B5B531E1FA80F00F7EF7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B5B511E1FA80F00F7EF7A /* Main.storyboard */; };
@@ -14,6 +26,7 @@
 		0C9B5B581E1FA80F00F7EF7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B5B561E1FA80F00F7EF7A /* LaunchScreen.storyboard */; };
 		0C9B5B631E1FA81000F7EF7A /* ContactSyncingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B5B621E1FA81000F7EF7A /* ContactSyncingTests.swift */; };
 		0C9B5B6E1E1FA81000F7EF7A /* ContactSyncingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B5B6D1E1FA81000F7EF7A /* ContactSyncingUITests.swift */; };
+		6627BDEA0E87083F64C522B0 /* Pods_ContactSyncing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB3D5B562B9BA95AF69E378 /* Pods_ContactSyncing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +46,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0C6638B01E1FEA57003C1008 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0C6638A91E1FEA57003C1008 /* EthanolUtilities.framework in Embed Frameworks */,
+				0C6638A51E1FEA57003C1008 /* DataSource.framework in Embed Frameworks */,
+				0C6638AD1E1FEA57003C1008 /* ReactiveSwift.framework in Embed Frameworks */,
+				0C6638AF1E1FEA57003C1008 /* Result.framework in Embed Frameworks */,
+				0C6638A71E1FEA57003C1008 /* EthanolContacts.framework in Embed Frameworks */,
+				0C6638AB1E1FEA57003C1008 /* ReactiveCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0C6638981E1FEA48003C1008 /* DataSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DataSource.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/DataSource.framework"; sourceTree = "<group>"; };
+		0C6638991E1FEA48003C1008 /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolContacts.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/EthanolContacts.framework"; sourceTree = "<group>"; };
+		0C66389A1E1FEA48003C1008 /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUtilities.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/EthanolUtilities.framework"; sourceTree = "<group>"; };
+		0C66389B1E1FEA48003C1008 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/ReactiveCocoa.framework"; sourceTree = "<group>"; };
+		0C66389C1E1FEA48003C1008 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/ReactiveSwift.framework"; sourceTree = "<group>"; };
+		0C66389D1E1FEA48003C1008 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/Result.framework"; sourceTree = "<group>"; };
 		0C9B5B4A1E1FA80F00F7EF7A /* ContactSyncing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactSyncing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9B5B4D1E1FA80F00F7EF7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C9B5B4F1E1FA80F00F7EF7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +85,9 @@
 		0C9B5B691E1FA81000F7EF7A /* ContactSyncingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactSyncingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9B5B6D1E1FA81000F7EF7A /* ContactSyncingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSyncingUITests.swift; sourceTree = "<group>"; };
 		0C9B5B6F1E1FA81000F7EF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16A7AABA1B7E5FFB287F140B /* Pods-ContactSyncing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactSyncing.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactSyncing/Pods-ContactSyncing.release.xcconfig"; sourceTree = "<group>"; };
+		2CA7D95A5F8662EB27B0B837 /* Pods-ContactSyncing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactSyncing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactSyncing/Pods-ContactSyncing.debug.xcconfig"; sourceTree = "<group>"; };
+		ABB3D5B562B9BA95AF69E378 /* Pods_ContactSyncing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactSyncing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +95,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C6638A81E1FEA57003C1008 /* EthanolUtilities.framework in Frameworks */,
+				0C6638A41E1FEA57003C1008 /* DataSource.framework in Frameworks */,
+				0C6638AC1E1FEA57003C1008 /* ReactiveSwift.framework in Frameworks */,
+				0C6638AE1E1FEA57003C1008 /* Result.framework in Frameworks */,
+				0C6638A61E1FEA57003C1008 /* EthanolContacts.framework in Frameworks */,
+				0C6638AA1E1FEA57003C1008 /* ReactiveCocoa.framework in Frameworks */,
+				6627BDEA0E87083F64C522B0 /* Pods_ContactSyncing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +122,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C1BE5501E1FB4C00030BFF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C6638981E1FEA48003C1008 /* DataSource.framework */,
+				0C6638991E1FEA48003C1008 /* EthanolContacts.framework */,
+				0C66389A1E1FEA48003C1008 /* EthanolUtilities.framework */,
+				0C66389B1E1FEA48003C1008 /* ReactiveCocoa.framework */,
+				0C66389C1E1FEA48003C1008 /* ReactiveSwift.framework */,
+				0C66389D1E1FEA48003C1008 /* Result.framework */,
+				ABB3D5B562B9BA95AF69E378 /* Pods_ContactSyncing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0C9B5B411E1FA80F00F7EF7A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +143,8 @@
 				0C9B5B611E1FA81000F7EF7A /* ContactSyncingTests */,
 				0C9B5B6C1E1FA81000F7EF7A /* ContactSyncingUITests */,
 				0C9B5B4B1E1FA80F00F7EF7A /* Products */,
+				0C1BE5501E1FB4C00030BFF9 /* Frameworks */,
+				43353BFFFE91ED54C1952FA6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +189,15 @@
 			path = ContactSyncingUITests;
 			sourceTree = "<group>";
 		};
+		43353BFFFE91ED54C1952FA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CA7D95A5F8662EB27B0B837 /* Pods-ContactSyncing.debug.xcconfig */,
+				16A7AABA1B7E5FFB287F140B /* Pods-ContactSyncing.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +205,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C9B5B721E1FA81000F7EF7A /* Build configuration list for PBXNativeTarget "ContactSyncing" */;
 			buildPhases = (
+				09A0BF310F9A989DB1E772A4 /* [CP] Check Pods Manifest.lock */,
 				0C9B5B461E1FA80F00F7EF7A /* Sources */,
 				0C9B5B471E1FA80F00F7EF7A /* Frameworks */,
 				0C9B5B481E1FA80F00F7EF7A /* Resources */,
+				0C6638B01E1FEA57003C1008 /* Embed Frameworks */,
+				6FC25CCDC275AD61E5F00E3F /* [CP] Embed Pods Frameworks */,
+				1774BF807C62049C45EE94B3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +333,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09A0BF310F9A989DB1E772A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1774BF807C62049C45EE94B3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactSyncing/Pods-ContactSyncing-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FC25CCDC275AD61E5F00E3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactSyncing/Pods-ContactSyncing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0C9B5B461E1FA80F00F7EF7A /* Sources */ = {
@@ -413,9 +538,11 @@
 		};
 		0C9B5B731E1FA81000F7EF7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CA7D95A5F8662EB27B0B837 /* Pods-ContactSyncing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 975YEVYX95;
+				FRAMEWORK_SEARCH_PATHS = "${inherited}";
 				INFOPLIST_FILE = ContactSyncing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bastienFalcou.ContactSyncing;
@@ -426,9 +553,11 @@
 		};
 		0C9B5B741E1FA81000F7EF7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16A7AABA1B7E5FFB287F140B /* Pods-ContactSyncing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 975YEVYX95;
+				FRAMEWORK_SEARCH_PATHS = "${inherited}";
 				INFOPLIST_FILE = ContactSyncing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bastienFalcou.ContactSyncing;
