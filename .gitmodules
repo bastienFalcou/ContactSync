@@ -1,0 +1,18 @@
+[submodule "Carthage/Checkouts/ethanol-utilities"]
+	path = Carthage/Checkouts/ethanol-utilities
+	url = ssh://git@github.com/Fueled/ethanol-utilities.git
+[submodule "Carthage/Checkouts/ethanol-contacts"]
+	path = Carthage/Checkouts/ethanol-contacts
+	url = ssh://git@github.com/Fueled/ethanol-contacts.git
+[submodule "Carthage/Checkouts/Result"]
+	path = Carthage/Checkouts/Result
+	url = ssh://git@github.com/antitypical/Result.git
+[submodule "Carthage/Checkouts/ReactiveSwift"]
+	path = Carthage/Checkouts/ReactiveSwift
+	url = ssh://git@github.com/ReactiveCocoa/ReactiveSwift.git
+[submodule "Carthage/Checkouts/ReactiveCocoa"]
+	path = Carthage/Checkouts/ReactiveCocoa
+	url = ssh://git@github.com/ReactiveCocoa/ReactiveCocoa.git
+[submodule "Carthage/Checkouts/DataSource"]
+	path = Carthage/Checkouts/DataSource
+	url = ssh://git@github.com/Vadim-Yelagin/DataSource.git

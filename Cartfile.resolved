@@ -1,0 +1,6 @@
+github "antitypical/Result" "3.1.0"
+github "Fueled/ethanol-utilities" "f4b4fcb73cd42666a9746984832018c827e79305"
+github "ReactiveCocoa/ReactiveSwift" "1.0.0-rc.2"
+github "Fueled/ethanol-contacts" "a672dc162fd106ebf8203cb4de211c479c239f2d"
+github "ReactiveCocoa/ReactiveCocoa" "5.0.0-alpha.5"
+github "Vadim-Yelagin/DataSource" "0.4.2"

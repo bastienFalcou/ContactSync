@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C6638A41E1FEA57003C1008 /* DataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6638981E1FEA48003C1008 /* DataSource.framework */; };
+		0C6638A51E1FEA57003C1008 /* DataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6638981E1FEA48003C1008 /* DataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6638A61E1FEA57003C1008 /* EthanolContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6638991E1FEA48003C1008 /* EthanolContacts.framework */; };
+		0C6638A71E1FEA57003C1008 /* EthanolContacts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6638991E1FEA48003C1008 /* EthanolContacts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6638A81E1FEA57003C1008 /* EthanolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389A1E1FEA48003C1008 /* EthanolUtilities.framework */; };
+		0C6638A91E1FEA57003C1008 /* EthanolUtilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389A1E1FEA48003C1008 /* EthanolUtilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6638AA1E1FEA57003C1008 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389B1E1FEA48003C1008 /* ReactiveCocoa.framework */; };
+		0C6638AB1E1FEA57003C1008 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389B1E1FEA48003C1008 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6638AC1E1FEA57003C1008 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389C1E1FEA48003C1008 /* ReactiveSwift.framework */; };
+		0C6638AD1E1FEA57003C1008 /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389C1E1FEA48003C1008 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6638AE1E1FEA57003C1008 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389D1E1FEA48003C1008 /* Result.framework */; };
+		0C6638AF1E1FEA57003C1008 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389D1E1FEA48003C1008 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C9B5B4E1E1FA80F00F7EF7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B5B4D1E1FA80F00F7EF7A /* AppDelegate.swift */; };
 		0C9B5B501E1FA80F00F7EF7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B5B4F1E1FA80F00F7EF7A /* ViewController.swift */; };
 		0C9B5B531E1FA80F00F7EF7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B5B511E1FA80F00F7EF7A /* Main.storyboard */; };
@@ -33,7 +45,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0C6638B01E1FEA57003C1008 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0C6638A91E1FEA57003C1008 /* EthanolUtilities.framework in Embed Frameworks */,
+				0C6638A51E1FEA57003C1008 /* DataSource.framework in Embed Frameworks */,
+				0C6638AD1E1FEA57003C1008 /* ReactiveSwift.framework in Embed Frameworks */,
+				0C6638AF1E1FEA57003C1008 /* Result.framework in Embed Frameworks */,
+				0C6638A71E1FEA57003C1008 /* EthanolContacts.framework in Embed Frameworks */,
+				0C6638AB1E1FEA57003C1008 /* ReactiveCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0C6638981E1FEA48003C1008 /* DataSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DataSource.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/DataSource.framework"; sourceTree = "<group>"; };
+		0C6638991E1FEA48003C1008 /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolContacts.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/EthanolContacts.framework"; sourceTree = "<group>"; };
+		0C66389A1E1FEA48003C1008 /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUtilities.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/EthanolUtilities.framework"; sourceTree = "<group>"; };
+		0C66389B1E1FEA48003C1008 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/ReactiveCocoa.framework"; sourceTree = "<group>"; };
+		0C66389C1E1FEA48003C1008 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/ReactiveSwift.framework"; sourceTree = "<group>"; };
+		0C66389D1E1FEA48003C1008 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/Result.framework"; sourceTree = "<group>"; };
 		0C9B5B4A1E1FA80F00F7EF7A /* ContactSyncing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactSyncing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9B5B4D1E1FA80F00F7EF7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C9B5B4F1E1FA80F00F7EF7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +91,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C6638A81E1FEA57003C1008 /* EthanolUtilities.framework in Frameworks */,
+				0C6638A41E1FEA57003C1008 /* DataSource.framework in Frameworks */,
+				0C6638AC1E1FEA57003C1008 /* ReactiveSwift.framework in Frameworks */,
+				0C6638AE1E1FEA57003C1008 /* Result.framework in Frameworks */,
+				0C6638A61E1FEA57003C1008 /* EthanolContacts.framework in Frameworks */,
+				0C6638AA1E1FEA57003C1008 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +117,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C1BE5501E1FB4C00030BFF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C6638981E1FEA48003C1008 /* DataSource.framework */,
+				0C6638991E1FEA48003C1008 /* EthanolContacts.framework */,
+				0C66389A1E1FEA48003C1008 /* EthanolUtilities.framework */,
+				0C66389B1E1FEA48003C1008 /* ReactiveCocoa.framework */,
+				0C66389C1E1FEA48003C1008 /* ReactiveSwift.framework */,
+				0C66389D1E1FEA48003C1008 /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0C9B5B411E1FA80F00F7EF7A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +137,7 @@
 				0C9B5B611E1FA81000F7EF7A /* ContactSyncingTests */,
 				0C9B5B6C1E1FA81000F7EF7A /* ContactSyncingUITests */,
 				0C9B5B4B1E1FA80F00F7EF7A /* Products */,
+				0C1BE5501E1FB4C00030BFF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +192,7 @@
 				0C9B5B461E1FA80F00F7EF7A /* Sources */,
 				0C9B5B471E1FA80F00F7EF7A /* Frameworks */,
 				0C9B5B481E1FA80F00F7EF7A /* Resources */,
+				0C6638B01E1FEA57003C1008 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

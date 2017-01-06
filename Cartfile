@@ -1,2 +1,2 @@
 github "Vadim-Yelagin/DataSource"
-github "Fueled/ethanol-contacts" == 0.1.5
+github "Fueled/ethanol-contacts" "swift-3"
