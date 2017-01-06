@@ -22,4 +22,10 @@
    <FileRef
       location = "group:Carthage/Checkouts/ethanol-utilities/EthanolUtilities.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:ContactSyncing.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>

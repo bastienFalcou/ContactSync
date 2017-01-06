@@ -5,7 +5,7 @@ inhibit_all_warnings!
 use_frameworks!
 
 target :ContactSyncing do
-
+	pod 'RealmSwift'
 end
 
 # Do not change the following. This is a workaround for FRAMEWORK_SEARCH_PATHS not containing ${inherited}.
@@ -20,4 +20,9 @@ post_install do |installer_representation|
 			File.open(xcconfig_file, "w") { |file| file << xcconfig }
 		end
 	end
+	installer_representation.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
 end
