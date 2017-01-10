@@ -16,4 +16,8 @@ final class PhoneContact: Object {
 
 	// Relationships
 	private let creditCards = List<CreditCard>()
+
+	static var allPhoneContacts: [PhoneContact] {
+		return Array(RealmManager.shared.realm.objects(PhoneContact.self))
+	}
 }
