@@ -29,6 +29,8 @@
 		0C69A7351E251200005A22B5 /* RACExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69A7331E251200005A22B5 /* RACExtensions.swift */; };
 		0C69A7361E251200005A22B5 /* RACTerminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69A7341E251200005A22B5 /* RACTerminal.swift */; };
 		0C69A7381E251444005A22B5 /* EntranceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69A7371E251444005A22B5 /* EntranceViewModel.swift */; };
+		0C69A73C1E2556F4005A22B5 /* PhoneContact+Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69A73B1E2556F4005A22B5 /* PhoneContact+Sync.swift */; };
+		0C69A73E1E255AC9005A22B5 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69A73D1E255AC9005A22B5 /* Array+Extensions.swift */; };
 		0C9B5B4E1E1FA80F00F7EF7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B5B4D1E1FA80F00F7EF7A /* AppDelegate.swift */; };
 		0C9B5B531E1FA80F00F7EF7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B5B511E1FA80F00F7EF7A /* Main.storyboard */; };
 		0C9B5B551E1FA80F00F7EF7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B5B541E1FA80F00F7EF7A /* Assets.xcassets */; };
@@ -91,6 +93,8 @@
 		0C69A7331E251200005A22B5 /* RACExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RACExtensions.swift; path = Helpers/Extensions/RACExtensions.swift; sourceTree = "<group>"; };
 		0C69A7341E251200005A22B5 /* RACTerminal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RACTerminal.swift; path = Helpers/Extensions/RACTerminal.swift; sourceTree = "<group>"; };
 		0C69A7371E251444005A22B5 /* EntranceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntranceViewModel.swift; path = Controllers/EntranceViewModel.swift; sourceTree = "<group>"; };
+		0C69A73B1E2556F4005A22B5 /* PhoneContact+Sync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PhoneContact+Sync.swift"; path = "Models/Sync/PhoneContact+Sync.swift"; sourceTree = "<group>"; };
+		0C69A73D1E255AC9005A22B5 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Extensions.swift"; path = "Helpers/Extensions/Array+Extensions.swift"; sourceTree = "<group>"; };
 		0C9B5B4A1E1FA80F00F7EF7A /* ContactSyncing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactSyncing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9B5B4D1E1FA80F00F7EF7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C9B5B521E1FA80F00F7EF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 		0C6638BD1E1FF501003C1008 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C69A73A1E2556DD005A22B5 /* Sync */,
 				0C6638C41E1FF63C003C1008 /* PhoneContact.swift */,
 				0C6638C61E1FF828003C1008 /* CreditCard.swift */,
 			);
@@ -215,8 +220,17 @@
 			children = (
 				0C69A7331E251200005A22B5 /* RACExtensions.swift */,
 				0C69A7341E251200005A22B5 /* RACTerminal.swift */,
+				0C69A73D1E255AC9005A22B5 /* Array+Extensions.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		0C69A73A1E2556DD005A22B5 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				0C69A73B1E2556F4005A22B5 /* PhoneContact+Sync.swift */,
+			);
+			name = Sync;
 			sourceTree = "<group>";
 		};
 		0C9B5B411E1FA80F00F7EF7A = {
@@ -354,6 +368,7 @@
 					0C9B5B491E1FA80F00F7EF7A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 975YEVYX95;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					0C9B5B5D1E1FA81000F7EF7A = {
@@ -478,6 +493,8 @@
 				0C69A7301E2509EC005A22B5 /* ContactTableViewCell.swift in Sources */,
 				0C6638C51E1FF63C003C1008 /* PhoneContact.swift in Sources */,
 				0C69A7321E250A05005A22B5 /* ContactTableViewCellModel.swift in Sources */,
+				0C69A73C1E2556F4005A22B5 /* PhoneContact+Sync.swift in Sources */,
+				0C69A73E1E255AC9005A22B5 /* Array+Extensions.swift in Sources */,
 				0C69A7351E251200005A22B5 /* RACExtensions.swift in Sources */,
 				0C69A7361E251200005A22B5 /* RACTerminal.swift in Sources */,
 				0C6638CE1E200B3E003C1008 /* RealmManager.swift in Sources */,

@@ -14,7 +14,7 @@ final class RealmManager: NSObject {
 
 	let realm = try! Realm()
 
-	func performInBackground(backgroundAction: @escaping (_ backgroundRealm: Realm) -> Void) {
+	func performInBackground(_ backgroundAction: @escaping (_ backgroundRealm: Realm) -> Void) {
 		DispatchQueue.global(qos: .background).async {
 			let backgroundRealm = try! Realm()
 			backgroundAction(backgroundRealm)

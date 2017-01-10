@@ -11,7 +11,7 @@ import DataSource
 import ReactiveSwift
 
 final class ContactTableViewCell: TableViewCell {
-	@IBOutlet private var contactNameLabel: UILabel!
+	@IBOutlet fileprivate var contactNameLabel: UILabel!
 
 	override func awakeFromNib() {
 		super.awakeFromNib()

@@ -15,9 +15,13 @@ final class PhoneContact: Object {
 	dynamic var username: String = ""
 
 	// Relationships
-	private let creditCards = List<CreditCard>()
+	fileprivate let creditCards = List<CreditCard>()
 
-	static var allPhoneContacts: [PhoneContact] {
-		return Array(RealmManager.shared.realm.objects(PhoneContact.self))
+	override static func primaryKey() -> String? {
+		return "phoneNumber"
+	}
+
+	static func allPhoneContacts(in realm: Realm = RealmManager.shared.realm) -> [PhoneContact] {
+		return Array(realm.objects(PhoneContact.self))
 	}
 }

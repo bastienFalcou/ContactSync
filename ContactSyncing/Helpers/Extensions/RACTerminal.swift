@@ -13,7 +13,7 @@ import DataSource
 import Result
 
 extension Reactive where Base: NSObject {
-	func target<U>(action: @escaping (Base, U) -> Void) -> BindingTarget<U> {
+	func target<U>(_ action: @escaping (Base, U) -> Void) -> BindingTarget<U> {
 		return BindingTarget(on: ImmediateScheduler(), lifetime: lifetime) {
 			[weak base = self.base] value in
 			if let base = base {

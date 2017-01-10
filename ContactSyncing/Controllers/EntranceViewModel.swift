@@ -47,11 +47,11 @@ final class EntranceViewModel: NSObject {
 
 	// MARK: - Private
 
-	private func updateSyncedPhoneContacts() {
-		self.syncedPhoneContacts.value = PhoneContact.allPhoneContacts
+	fileprivate func updateSyncedPhoneContacts() {
+		self.syncedPhoneContacts.value = PhoneContact.allPhoneContacts()
 	}
 
-	private func addTestUser() {
+	fileprivate func addTestUser() {
 		let phoneContact = PhoneContact()
 		phoneContact.phoneNumber = "+33648164683"
 		phoneContact.username = "bastienFalcou"

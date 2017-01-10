@@ -11,7 +11,7 @@ import ReactiveSwift
 import DataSource
 
 final class EntranceViewController: UIViewController {
-	@IBOutlet private var tableView: UITableView!
+	@IBOutlet fileprivate var tableView: UITableView!
 
 	let viewModel = EntranceViewModel()
 	let tableDataSource = TableViewDataSource()
