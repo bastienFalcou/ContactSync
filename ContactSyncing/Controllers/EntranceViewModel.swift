@@ -31,7 +31,10 @@ final class EntranceViewModel: NSObject {
 		self.updateSyncedPhoneContacts()
 	}
 
-	func syncContacts() -> Void /*SignalProducer<Void, NSError>*/ {
+	func syncContacts() {
+		ContactFetcher.shared.syncContactsAction.apply().observe(on: UIScheduler()).startWithResult { [weak self] result in
+			self?.updateSyncedPhoneContacts()
+		}
 	}
 
 	func removeAllContacts() {

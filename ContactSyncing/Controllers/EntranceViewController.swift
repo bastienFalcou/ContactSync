@@ -19,6 +19,8 @@ final class EntranceViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+		ContactFetcher.shared.requestContactsPermission()
+
 		self.tableDataSource.reuseIdentifierForItem = { _ in
 			return ContactTableViewCellModel.reuseIdentifier
 		}

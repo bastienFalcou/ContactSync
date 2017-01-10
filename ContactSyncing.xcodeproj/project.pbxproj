@@ -22,7 +22,7 @@
 		0C6638C21E1FF61F003C1008 /* EntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638C11E1FF61F003C1008 /* EntranceViewController.swift */; };
 		0C6638C51E1FF63C003C1008 /* PhoneContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638C41E1FF63C003C1008 /* PhoneContact.swift */; };
 		0C6638C71E1FF828003C1008 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638C61E1FF828003C1008 /* CreditCard.swift */; };
-		0C6638CC1E1FFFB9003C1008 /* PhoneContactsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638CB1E1FFFB9003C1008 /* PhoneContactsFetcher.swift */; };
+		0C6638CC1E1FFFB9003C1008 /* ContactFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638CB1E1FFFB9003C1008 /* ContactFetcher.swift */; };
 		0C6638CE1E200B3E003C1008 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638CD1E200B3E003C1008 /* RealmManager.swift */; };
 		0C69A7301E2509EC005A22B5 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69A72F1E2509EC005A22B5 /* ContactTableViewCell.swift */; };
 		0C69A7321E250A05005A22B5 /* ContactTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69A7311E250A05005A22B5 /* ContactTableViewCellModel.swift */; };
@@ -84,7 +84,7 @@
 		0C6638C11E1FF61F003C1008 /* EntranceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntranceViewController.swift; path = Controllers/EntranceViewController.swift; sourceTree = "<group>"; };
 		0C6638C41E1FF63C003C1008 /* PhoneContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneContact.swift; path = Models/PhoneContact.swift; sourceTree = "<group>"; };
 		0C6638C61E1FF828003C1008 /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreditCard.swift; path = Models/CreditCard.swift; sourceTree = "<group>"; };
-		0C6638CB1E1FFFB9003C1008 /* PhoneContactsFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneContactsFetcher.swift; path = Helpers/Classes/PhoneContactsFetcher.swift; sourceTree = "<group>"; };
+		0C6638CB1E1FFFB9003C1008 /* ContactFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactFetcher.swift; path = Helpers/Classes/ContactFetcher.swift; sourceTree = "<group>"; };
 		0C6638CD1E200B3E003C1008 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmManager.swift; path = Helpers/Classes/RealmManager.swift; sourceTree = "<group>"; };
 		0C69A72F1E2509EC005A22B5 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewCell.swift; path = Views/ContactTableViewCell.swift; sourceTree = "<group>"; };
 		0C69A7311E250A05005A22B5 /* ContactTableViewCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewCellModel.swift; path = Views/ContactTableViewCellModel.swift; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 		0C6638C91E1FFF96003C1008 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0C6638CB1E1FFFB9003C1008 /* PhoneContactsFetcher.swift */,
+				0C6638CB1E1FFFB9003C1008 /* ContactFetcher.swift */,
 				0C6638CD1E200B3E003C1008 /* RealmManager.swift */,
 			);
 			name = Classes;
@@ -472,7 +472,7 @@
 			files = (
 				0C6638C71E1FF828003C1008 /* CreditCard.swift in Sources */,
 				0C6638C21E1FF61F003C1008 /* EntranceViewController.swift in Sources */,
-				0C6638CC1E1FFFB9003C1008 /* PhoneContactsFetcher.swift in Sources */,
+				0C6638CC1E1FFFB9003C1008 /* ContactFetcher.swift in Sources */,
 				0C69A7381E251444005A22B5 /* EntranceViewModel.swift in Sources */,
 				0C9B5B4E1E1FA80F00F7EF7A /* AppDelegate.swift in Sources */,
 				0C69A7301E2509EC005A22B5 /* ContactTableViewCell.swift in Sources */,
