@@ -37,6 +37,7 @@
 		0C9B5B581E1FA80F00F7EF7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B5B561E1FA80F00F7EF7A /* LaunchScreen.storyboard */; };
 		0C9B5B631E1FA81000F7EF7A /* ContactSyncingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B5B621E1FA81000F7EF7A /* ContactSyncingTests.swift */; };
 		0C9B5B6E1E1FA81000F7EF7A /* ContactSyncingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B5B6D1E1FA81000F7EF7A /* ContactSyncingUITests.swift */; };
+		0CDDB6861E27AA9D00BE8E7E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDB6851E27AA9D00BE8E7E /* Constants.swift */; };
 		6627BDEA0E87083F64C522B0 /* Pods_ContactSyncing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB3D5B562B9BA95AF69E378 /* Pods_ContactSyncing.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		0C9B5B691E1FA81000F7EF7A /* ContactSyncingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactSyncingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9B5B6D1E1FA81000F7EF7A /* ContactSyncingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSyncingUITests.swift; sourceTree = "<group>"; };
 		0C9B5B6F1E1FA81000F7EF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CDDB6851E27AA9D00BE8E7E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		16A7AABA1B7E5FFB287F140B /* Pods-ContactSyncing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactSyncing.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactSyncing/Pods-ContactSyncing.release.xcconfig"; sourceTree = "<group>"; };
 		2CA7D95A5F8662EB27B0B837 /* Pods-ContactSyncing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactSyncing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactSyncing/Pods-ContactSyncing.debug.xcconfig"; sourceTree = "<group>"; };
 		ABB3D5B562B9BA95AF69E378 /* Pods_ContactSyncing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactSyncing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				0C9B5B4D1E1FA80F00F7EF7A /* AppDelegate.swift */,
+				0CDDB6851E27AA9D00BE8E7E /* Constants.swift */,
 				0C6638BE1E1FF506003C1008 /* Controllers */,
 				0C6638BF1E1FF50D003C1008 /* Views */,
 				0C6638C81E1FFF7E003C1008 /* Helpers */,
@@ -496,6 +499,7 @@
 				0C69A73C1E2556F4005A22B5 /* PhoneContact+Sync.swift in Sources */,
 				0C69A73E1E255AC9005A22B5 /* Array+Extensions.swift in Sources */,
 				0C69A7351E251200005A22B5 /* RACExtensions.swift in Sources */,
+				0CDDB6861E27AA9D00BE8E7E /* Constants.swift in Sources */,
 				0C69A7361E251200005A22B5 /* RACTerminal.swift in Sources */,
 				0C6638CE1E200B3E003C1008 /* RealmManager.swift in Sources */,
 			);

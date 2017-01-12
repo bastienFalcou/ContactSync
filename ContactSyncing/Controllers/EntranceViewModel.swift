@@ -15,7 +15,15 @@ final class EntranceViewModel: NSObject {
 	var dataSource = MutableProperty<DataSource>(EmptyDataSource())
 	let disposable = CompositeDisposable()
 
+	var syncingDisposable: Disposable? {
+		willSet {
+			self.syncingDisposable?.dispose()
+		}
+	}
+
 	let syncedPhoneContacts = MutableProperty<[PhoneContact]>([])
+	let syncingProgress = MutableProperty(0.0)
+	let isSyncing = MutableProperty(false)
 
 	deinit {
 		self.disposable.dispose()
@@ -24,40 +32,33 @@ final class EntranceViewModel: NSObject {
 	override init() {
 		super.init()
 
+		self.disposable += self.isSyncing <~ ContactFetcher.shared.syncContactsAction.isExecuting
 		self.disposable += self.syncedPhoneContacts.producer.startWithValues { [weak self] syncedPhoneContacts in
 			self?.dataSource.value = StaticDataSource(items: syncedPhoneContacts.map { ContactTableViewCellModel(contact: $0) })
-		}
 
-		self.updateSyncedPhoneContacts()
+			let localPhoneContactsCount = PhoneContact.allPhoneContacts().count
+			self?.syncingProgress.value = localPhoneContactsCount == 0 ? 0.0 : Double(syncedPhoneContacts.count) / Double(localPhoneContactsCount)
+		}
 	}
 
 	func syncContacts() {
-		ContactFetcher.shared.syncContactsAction.apply().observe(on: UIScheduler()).startWithResult { [weak self] result in
-			self?.updateSyncedPhoneContacts()
+		self.syncingDisposable = ContactFetcher.shared.syncContactsAction.apply().startWithResult { [weak self] result in
+			if let syncedContacts = result.value {
+				syncedContacts.forEach { self?.syncedPhoneContacts.value.append($0) }
+			}
 		}
 	}
 
 	func removeAllContacts() {
-		try! RealmManager.shared.realm.write {
-			let allContacts = RealmManager.shared.realm.objects(PhoneContact.self)
-			RealmManager.shared.realm.delete(allContacts)
-			self.updateSyncedPhoneContacts()
-		}
-	}
+		self.syncingDisposable?.dispose()
 
-	// MARK: - Private
-
-	fileprivate func updateSyncedPhoneContacts() {
-		self.syncedPhoneContacts.value = PhoneContact.allPhoneContacts()
-	}
-
-	fileprivate func addTestUser() {
-		let phoneContact = PhoneContact()
-		phoneContact.phoneNumber = "+33648164683"
-		phoneContact.username = "bastienFalcou"
-
-		try! RealmManager.shared.realm.write {
-			RealmManager.shared.realm.add(phoneContact)
+		do {
+			try RealmManager.shared.realm.write {
+				RealmManager.shared.realm.delete(RealmManager.shared.realm.objects(PhoneContact.self))
+				self.syncedPhoneContacts.value = PhoneContact.allPhoneContacts()
+			}
+		} catch {
+			print("Entrance View Model: could not remove all contacts")
 		}
 	}
 }

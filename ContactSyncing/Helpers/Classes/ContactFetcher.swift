@@ -15,40 +15,25 @@ import Contacts
 final class ContactFetcher: NSObject {
 	static var shared = ContactFetcher()
 
-	fileprivate let phoneContactFetcher = PhoneContactFetcher()
+	private let phoneContactFetcher = PhoneContactFetcher()
 	var syncContactsAction: Action<Void, [PhoneContact], NSError>!
 
-	let didAnswerContactsPermissionSignal: Signal<Void, NSError>
-	fileprivate let didAnswerContactsPermissionObserver: Observer<Void, NSError>
-
-	internal let areContactsActive = MutableProperty(false)
+	private let areContactsActive = MutableProperty(false)
 
 	override init() {
-		(self.didAnswerContactsPermissionSignal, self.didAnswerContactsPermissionObserver) = Signal.pipe()
-
 		super.init()
-
 		self.syncContactsAction = Action(self.syncRemoteAddressBook)
 	}
 
 	func requestContactsPermission() {
-		func notify() {
-			self.updateAuthorizationStatusIfNeeded()
-			self.didAnswerContactsPermissionObserver.send(value: ())
-		}
 		self.phoneContactFetcher.authorize(success: {
-			notify()
+			print("Contacts: access granted")
 		}) { error in
-			notify()
+			print("Contacts: access denied")
 		}
 	}
 
 	// PRAGMA: - private
-
-	fileprivate func updateAuthorizationStatusIfNeeded() {
-		let authorizationStatus = CNContactStore.authorizationStatus(for: CNEntityType.contacts)
-		self.areContactsActive.value = authorizationStatus == .authorized
-	}
 
 	fileprivate func syncLocalAddressBook() -> SignalProducer<[String], NSError> {
 		return SignalProducer { sink, disposable in
@@ -93,25 +78,16 @@ final class ContactFetcher: NSObject {
 
 		return SignalProducer { sink, disposable in
 			self.syncLocalAddressBook().startWithResult { result in
-				if let error = result.error {
-					sink.send(error: error as NSError)
-					return
-				}
-
-				RealmManager.shared.performInBackground { backgroundRealm in
-					do {
-						let localContacts: [PhoneContact] = result.value!.map { id in
-							return backgroundRealm.object(ofType: PhoneContact.self, forPrimaryKey: id)!
-						}
-
+				switch result {
+				case .success(let result):
+					RealmManager.shared.performInBackground { backgroundRealm in
 						//Contact.syncLocalContacts(localContacts, context: backgroundContext)
 						print("Contacts: number local contacts after syncing: \(PhoneContact.allPhoneContacts(in: backgroundRealm).count)")
 
-						PhoneContact.syncRemoteContacts(localContacts).start(sink)
-					} catch {
-						print("Contacts: failed to save synced contacts: \(error)")
-						sink.send(error: error as NSError)
+						PhoneContact.syncRemoteContacts(for: result).observe(on: UIScheduler()).start(sink)
 					}
+				case .failure(let error):
+					sink.send(error: error as NSError)
 				}
 			}
 		}

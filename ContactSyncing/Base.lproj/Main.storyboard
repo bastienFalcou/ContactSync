@@ -49,9 +49,29 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6sg-4K-kHh" userLabel="Status Container View">
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YPr-gC-DBf">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="aOO-Dh-RXv"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="w0A-Bd-ot8"/>
+                                        </constraints>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Syncing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cq-yG-bRi">
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.93002569400000001" green="0.93002569400000001" blue="0.93002569400000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="7Cq-yG-bRi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6sg-4K-kHh" secondAttribute="leading" constant="10" id="3LS-0e-PXe"/>
+                                    <constraint firstAttribute="trailing" secondItem="YPr-gC-DBf" secondAttribute="trailing" id="M2J-fR-YwM"/>
+                                    <constraint firstItem="YPr-gC-DBf" firstAttribute="leading" secondItem="6sg-4K-kHh" secondAttribute="leading" id="PjY-oB-hEX"/>
+                                    <constraint firstItem="7Cq-yG-bRi" firstAttribute="centerY" secondItem="6sg-4K-kHh" secondAttribute="centerY" constant="1" id="TmY-3M-ENg"/>
+                                    <constraint firstItem="7Cq-yG-bRi" firstAttribute="centerX" secondItem="6sg-4K-kHh" secondAttribute="centerX" id="gaV-xE-UND"/>
                                     <constraint firstAttribute="height" constant="34" id="uZ9-3C-rb2"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7Cq-yG-bRi" secondAttribute="trailing" constant="10" id="uc6-hd-j27"/>
+                                    <constraint firstItem="YPr-gC-DBf" firstAttribute="top" secondItem="6sg-4K-kHh" secondAttribute="top" id="vu6-vR-ZiN"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="53" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hJe-5j-s6W">
@@ -112,12 +132,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Syncing Contacts" id="htw-KF-QZZ"/>
                     <connections>
+                        <outlet property="syncingProgressView" destination="YPr-gC-DBf" id="J3K-hD-Aad"/>
+                        <outlet property="syncingStatusLabel" destination="7Cq-yG-bRi" id="2f5-IT-krW"/>
                         <outlet property="tableView" destination="hJe-5j-s6W" id="Kxq-6f-2cw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1185" y="37"/>
+            <point key="canvasLocation" x="1184.8" y="36.431784107946029"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Byd-0G-Z3A">

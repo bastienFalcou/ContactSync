@@ -12,18 +12,16 @@ import ReactiveSwift
 // Recursive Y-combinator functions inspired from:
 // https://xiliangchen.wordpress.com/2014/08/04/recursive-closure-and-y-combinator-in-swift/
 
-func Y<T, R>(_ function: @escaping (@escaping (T) -> R) -> ((T) -> R) ) -> ((T) -> R) {
+func Y<T, R>(_ function: @escaping (@escaping (T) -> R) -> ((T) -> R)) -> ((T) -> R) {
 	return { argument in function(Y(function))(argument) }
 }
 
 extension PhoneContact {
-	@nonobjc static let apiContactsSyncChunkLimit: Int = 2
-
-	static func syncRemoteContacts(_ localContacts: [PhoneContact])
+	static func syncRemoteContacts(for phoneNumberIds: [String])
 		-> SignalProducer<[PhoneContact], NSError>
 	{
 		return SignalProducer { sink, disposable in
-			let chunks = localContacts.chunk(PhoneContact.apiContactsSyncChunkLimit)
+			let chunks = phoneNumberIds.chunk(RemoteSyncingConfigurations.apiContactsSyncChunkLimit)
 			var chunkIndex = 0
 			let	chunkCount = chunks.count
 
@@ -48,17 +46,23 @@ extension PhoneContact {
 		}
 	}
 
-	fileprivate static func syncContactsChunkInternal(_ chunck: [PhoneContact])
+	fileprivate static func syncContactsChunkInternal(_ chunck: [String])
 		-> SignalProducer<[PhoneContact], NSError>
 	{
 		return SignalProducer { sink, _ in
 			RealmManager.shared.performInBackground { backgroundRealm in
-				// Simulate API call that would take in parameters all phone numbers of the chunck contacts, parse JSON from
-				// server and update the PhoneContact objects accordingly, before returning everything.
-				sleep(UInt32(3.0))
+				// Simulate API call that would take in parameters all thread safe contacts (including most 
+				// likely their phone numbers to use as parameter of the call) of the chunck contacts, parse
+				// JSON from server and update the PhoneContact objects accordingly, before returning everything.
+				sleep(UInt32(RemoteSyncingConfigurations.apiContactsSyncCallDuration))
 
-				sink.send(value: chunck)
-				sink.sendCompleted()
+				DispatchQueue.main.async {
+					let contacts: [PhoneContact] = chunck.map { id in
+						return RealmManager.shared.realm.object(ofType: PhoneContact.self, forPrimaryKey: id)!
+					}
+					sink.send(value: contacts)
+					sink.sendCompleted()
+				}
 			}
 		}
 	}

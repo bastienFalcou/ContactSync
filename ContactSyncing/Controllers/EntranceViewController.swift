@@ -11,10 +11,13 @@ import ReactiveSwift
 import DataSource
 
 final class EntranceViewController: UIViewController {
-	@IBOutlet fileprivate var tableView: UITableView!
+	@IBOutlet private var tableView: UITableView!
+	@IBOutlet private var syncingProgressView: UIProgressView!
+	@IBOutlet private var syncingStatusLabel: UILabel!
 
 	let viewModel = EntranceViewModel()
 	let tableDataSource = TableViewDataSource()
+	let disposable = CompositeDisposable()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -30,6 +33,9 @@ final class EntranceViewController: UIViewController {
 		self.tableDataSource.tableView = self.tableView
 
 		self.tableDataSource.dataSource.innerDataSource <~ self.viewModel.dataSource
+
+		self.disposable += self.syncingStatusLabel.reactive.text <~ self.viewModel.isSyncing.map { $0 ? "Syncing" : "Inactive" }
+		self.disposable += self.syncingProgressView.reactive.progress <~ self.viewModel.syncingProgress.map { Float($0) }
 	}
 
 	@IBAction func removeAllContactsButtonTapped(_ sender: AnyObject) {
