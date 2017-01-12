@@ -21,7 +21,7 @@ final class EntranceViewModel: NSObject {
 		}
 	}
 
-	let syncedPhoneContacts = MutableProperty<[PhoneContact]>([])
+	let syncedPhoneContacts = MutableProperty<Set<PhoneContact>>([])
 	let syncingProgress = MutableProperty(0.0)
 	let isSyncing = MutableProperty(false)
 
@@ -44,7 +44,7 @@ final class EntranceViewModel: NSObject {
 	func syncContacts() {
 		self.syncingDisposable = ContactFetcher.shared.syncContactsAction.apply().startWithResult { [weak self] result in
 			if let syncedContacts = result.value {
-				syncedContacts.forEach { self?.syncedPhoneContacts.value.append($0) }
+				syncedContacts.forEach { self?.syncedPhoneContacts.value.insert($0) }
 			}
 		}
 	}
@@ -55,7 +55,7 @@ final class EntranceViewModel: NSObject {
 		do {
 			try RealmManager.shared.realm.write {
 				RealmManager.shared.realm.delete(RealmManager.shared.realm.objects(PhoneContact.self))
-				self.syncedPhoneContacts.value = PhoneContact.allPhoneContacts()
+				self.syncedPhoneContacts.value = Set(PhoneContact.allPhoneContacts())
 			}
 		} catch {
 			print("Entrance View Model: could not remove all contacts")

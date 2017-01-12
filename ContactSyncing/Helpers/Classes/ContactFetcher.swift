@@ -40,23 +40,17 @@ final class ContactFetcher: NSObject {
 			self.phoneContactFetcher.fetchContacts(for: [.GivenName, .FamilyName, .Phone], success: { contacts in
 				RealmManager.shared.performInBackground { backgroundRealm in
 					var contactEntities: [PhoneContact] = []
+					backgroundRealm.beginWrite()
 
 					for contact in contacts where contact.phone != nil && !contact.phone!.isEmpty {
-						let phoneNumber = contact.phone!.first!
-
-						//let contactEntity = Contact.existingObject(withKey: phoneNumber, forKeyFieldName: "phoneNumber", inContext: backgroundContext)
-							//?? Contact.newInstance(inContext: backgroundContext)
-
-						let contactEntity = PhoneContact()
-
-						contactEntity.phoneNumber = phoneNumber
+						let contactEntity = PhoneContact.uniqueObject(for: contact.phone!.first!, in: backgroundRealm)
 						contactEntity.username = contact.familyName.isEmpty ? "\(contact.givenName)" : "\(contact.givenName) \(contact.familyName)"
 						contactEntities.append(contactEntity)
 					}
+
 					do {
-						try backgroundRealm.write {
-							backgroundRealm.add(contactEntities)
-						}
+						backgroundRealm.add(contactEntities)
+						try	backgroundRealm.commitWrite()
 						backgroundRealm.refresh()
 
 						sink.send(value: contactEntities.map { $0.phoneNumber })
