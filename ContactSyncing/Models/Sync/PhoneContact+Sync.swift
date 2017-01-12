@@ -17,11 +17,11 @@ func Y<T, R>(_ function: @escaping (@escaping (T) -> R) -> ((T) -> R)) -> ((T) -
 }
 
 extension PhoneContact {
-	static func syncRemoteContacts(for phoneNumberIds: [String])
+	static func syncRemoteContacts(for phoneNumbers: [String])
 		-> SignalProducer<[PhoneContact], NSError>
 	{
 		return SignalProducer { sink, disposable in
-			let chunks = phoneNumberIds.chunk(RemoteSyncingConfigurations.apiContactsSyncChunkLimit)
+			let chunks = phoneNumbers.chunk(RemoteSyncingConfigurations.apiContactsSyncChunkLimit)
 			var chunkIndex = 0
 			let	chunkCount = chunks.count
 

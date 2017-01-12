@@ -79,12 +79,12 @@ final class ContactFetcher: NSObject {
 		return SignalProducer { sink, disposable in
 			self.syncLocalAddressBook().startWithResult { result in
 				switch result {
-				case .success(let result):
+				case .success(let phoneNumbers):
 					RealmManager.shared.performInBackground { backgroundRealm in
-						//Contact.syncLocalContacts(localContacts, context: backgroundContext)
+						let threadSafeNewContacts = phoneNumbers.map { backgroundRealm.object(ofType: PhoneContact.self, forPrimaryKey: $0)! }
+						PhoneContact.substractObsoleteLocalContacts(with: threadSafeNewContacts, realm: backgroundRealm)
+						PhoneContact.syncRemoteContacts(for: phoneNumbers).observe(on: UIScheduler()).start(sink)
 						print("Contacts: number local contacts after syncing: \(PhoneContact.allPhoneContacts(in: backgroundRealm).count)")
-
-						PhoneContact.syncRemoteContacts(for: result).observe(on: UIScheduler()).start(sink)
 					}
 				case .failure(let error):
 					sink.send(error: error as NSError)
