@@ -12,6 +12,7 @@ import DataSource
 
 final class EntranceViewController: UIViewController {
 	@IBOutlet private var tableView: UITableView!
+	@IBOutlet private var removeAllContactsButton: UIButton!
 	@IBOutlet private var syncingProgressView: UIProgressView!
 	@IBOutlet private var syncingStatusLabel: UILabel!
 
@@ -34,7 +35,8 @@ final class EntranceViewController: UIViewController {
 
 		self.tableDataSource.dataSource.innerDataSource <~ self.viewModel.dataSource
 
-		self.disposable += self.syncingStatusLabel.reactive.text <~ self.viewModel.isSyncing.map { $0 ? "Syncing" : "Inactive" }
+		self.disposable += self.removeAllContactsButton.reactive.isEnabled <~ self.viewModel.isSyncing.map { !$0 }
+		self.disposable += self.syncingStatusLabel.reactive.text <~ self.viewModel.isSyncing.map { $0 ? "Syncing in background" : "Inactive" }
 		self.disposable += self.syncingProgressView.reactive.progress <~ self.viewModel.syncingProgress.map { Float($0) }
 	}
 
