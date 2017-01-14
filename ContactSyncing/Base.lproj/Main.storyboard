@@ -34,6 +34,9 @@
                                         <state key="normal" title="REMOVE ALL CONTACTS">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="removeAllContactsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DXu-vG-ktL"/>
                                         </connections>
@@ -83,7 +86,7 @@
                                         <rect key="frame" x="0.0" y="28" width="359" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lan-yo-gmE" id="o62-Hg-RB2">
-                                            <frame key="frameInset" width="359" height="52"/>
+                                            <frame key="frameInset" width="359" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone-Contact-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="RUR-gL-scn">
@@ -132,6 +135,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Syncing Contacts" id="htw-KF-QZZ"/>
                     <connections>
+                        <outlet property="removeAllContactsButton" destination="tT7-j2-FR6" id="Gih-aj-gyp"/>
                         <outlet property="syncingProgressView" destination="YPr-gC-DBf" id="J3K-hD-Aad"/>
                         <outlet property="syncingStatusLabel" destination="7Cq-yG-bRi" id="2f5-IT-krW"/>
                         <outlet property="tableView" destination="hJe-5j-s6W" id="Kxq-6f-2cw"/>

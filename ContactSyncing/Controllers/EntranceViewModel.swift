@@ -15,12 +15,6 @@ final class EntranceViewModel: NSObject {
 	var dataSource = MutableProperty<DataSource>(EmptyDataSource())
 	let disposable = CompositeDisposable()
 
-	var syncingDisposable: Disposable? {
-		willSet {
-			self.syncingDisposable?.dispose()
-		}
-	}
-
 	let syncedPhoneContacts = MutableProperty<Set<PhoneContact>>([])
 	let syncingProgress = MutableProperty(0.0)
 	let isSyncing = MutableProperty(false)
@@ -42,7 +36,7 @@ final class EntranceViewModel: NSObject {
 	}
 
 	func syncContacts() {
-		self.syncingDisposable = ContactFetcher.shared.syncContactsAction.apply().startWithResult { [weak self] result in
+		self.disposable += ContactFetcher.shared.syncContactsAction.apply().startWithResult { [weak self] result in
 			if let syncedContacts = result.value {
 				syncedContacts.forEach { self?.syncedPhoneContacts.value.insert($0) }
 			}
@@ -50,8 +44,6 @@ final class EntranceViewModel: NSObject {
 	}
 
 	func removeAllContacts() {
-		self.syncingDisposable?.dispose()
-
 		do {
 			try RealmManager.shared.realm.write {
 				RealmManager.shared.realm.delete(RealmManager.shared.realm.objects(PhoneContact.self))
