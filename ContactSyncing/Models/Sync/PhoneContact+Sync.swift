@@ -11,14 +11,14 @@ import RealmSwift
 
 extension PhoneContact: SyncProtocol {
 	static func uniqueObject(for id: Any, in realm: Realm?) -> PhoneContact {
-		let phoneNumber: String = id as! String
+		let identifier: String = id as! String
 		let realm = realm ?? RealmManager.shared.realm
 
-		if let existingObject = realm.object(ofType: PhoneContact.self, forPrimaryKey: phoneNumber) {
+		if let existingObject = realm.object(ofType: PhoneContact.self, forPrimaryKey: identifier) {
 			return existingObject
 		} else {
 			let newObject = PhoneContact()
-			newObject.phoneNumber = phoneNumber
+			newObject.identifier = identifier
 			return newObject
 		}
 	}

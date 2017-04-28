@@ -39,13 +39,14 @@ final class ContactFetcher: NSObject {
 		return SignalProducer { sink, disposable in
 			self.phoneContactFetcher.fetchContacts(for: [.GivenName, .FamilyName, .Phone], success: { contacts in
 				RealmManager.shared.performInBackground { backgroundRealm in
-					var contactEntities: [PhoneContact] = []
+					var contactEntities = Set<PhoneContact>()
 					backgroundRealm.beginWrite()
 
 					for contact in contacts where contact.phone != nil && !contact.phone!.isEmpty {
-						let contactEntity = PhoneContact.uniqueObject(for: contact.phone!.first!, in: backgroundRealm)
+						let contactEntity = PhoneContact.uniqueObject(for: contact.identifier, in: backgroundRealm)
+						contactEntity.phoneNumber = contact.phone!.first!
 						contactEntity.username = contact.familyName.isEmpty ? "\(contact.givenName)" : "\(contact.givenName) \(contact.familyName)"
-						contactEntities.append(contactEntity)
+						contactEntities.insert(contactEntity)
 					}
 
 					do {
@@ -53,7 +54,7 @@ final class ContactFetcher: NSObject {
 						try	backgroundRealm.commitWrite()
 						backgroundRealm.refresh()
 
-						sink.send(value: contactEntities.map { $0.phoneNumber })
+						sink.send(value: contactEntities.map { $0.identifier })
 						sink.sendCompleted()
 					} catch {
 						print("Contacts: failed to save synced contacts: \(error)")
@@ -61,8 +62,9 @@ final class ContactFetcher: NSObject {
 					}
 				}
 			}) { error in
-				print("Contacts: failed to save synced contacts: \(error)")
-				sink.send(error: error as! NSError)
+				let error = error != nil ? error! as NSError : NSError(domain: "bastienFalcou.ContactSyncing.ContactFetcher.", code: 0, userInfo: nil)
+				print("Contacts: failed to save synced contacts: \(error.localizedDescription)")
+				sink.send(error: error)
 			}
 		}
 	}
@@ -73,11 +75,11 @@ final class ContactFetcher: NSObject {
 		return SignalProducer { sink, disposable in
 			self.syncLocalAddressBook().startWithResult { result in
 				switch result {
-				case .success(let phoneNumbers):
+				case .success(let identifiers):
 					RealmManager.shared.performInBackground { backgroundRealm in
-						let threadSafeNewContacts = phoneNumbers.map { backgroundRealm.object(ofType: PhoneContact.self, forPrimaryKey: $0)! }
+						let threadSafeNewContacts = identifiers.map { backgroundRealm.object(ofType: PhoneContact.self, forPrimaryKey: $0)! }
 						PhoneContact.substractObsoleteLocalContacts(with: threadSafeNewContacts, realm: backgroundRealm)
-						PhoneContact.syncRemoteContacts(for: phoneNumbers).observe(on: UIScheduler()).start(sink)
+						PhoneContact.syncRemoteContacts(for: identifiers).observe(on: UIScheduler()).start(sink)
 						print("Contacts: number local contacts after syncing: \(PhoneContact.allPhoneContacts(in: backgroundRealm).count)")
 					}
 				case .failure(let error):

@@ -18,7 +18,6 @@ final class EntranceViewController: UIViewController {
 
 	let viewModel = EntranceViewModel()
 	let tableDataSource = TableViewDataSource()
-	let disposable = CompositeDisposable()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -35,9 +34,9 @@ final class EntranceViewController: UIViewController {
 
 		self.tableDataSource.dataSource.innerDataSource <~ self.viewModel.dataSource
 
-		self.disposable += self.removeAllContactsButton.reactive.isEnabled <~ self.viewModel.isSyncing.map { !$0 }
-		self.disposable += self.syncingStatusLabel.reactive.text <~ self.viewModel.isSyncing.map { $0 ? "Syncing in background" : "Inactive" }
-		self.disposable += self.syncingProgressView.reactive.progress <~ self.viewModel.syncingProgress.map { Float($0) }
+		self.removeAllContactsButton.reactive.isEnabled <~ self.viewModel.isSyncing.map { !$0 }
+		self.syncingStatusLabel.reactive.text <~ self.viewModel.isSyncing.map { $0 ? "Syncing in background" : "Inactive" }
+		self.syncingProgressView.reactive.progress <~ self.viewModel.syncingProgress.map { Float($0) }
 	}
 
 	@IBAction func removeAllContactsButtonTapped(_ sender: AnyObject) {
