@@ -14,18 +14,23 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DAECA663-6941-4755-8C2E-52954DE354A9",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "35208B909CC6F30C9B16842C4EFCFD7051946857" : "ContactSyncing\/Carthage\/Checkouts\/ethanol-contacts\/",
-    "490E57B35E951D5E5221A47EAB9C248E2FEBC174" : "ContactSyncing\/Carthage\/Checkouts\/DataSource\/",
-    "956D2B21DD155C49504BB67697A67F7C5351A353" : "ContactSyncing\/Carthage\/Checkouts\/Result\/",
-    "E084C86B03F81D63323C9E7510697EA528A758C7" : "ContactSyncing\/Carthage\/Checkouts\/ReactiveCocoa\/Carthage\/Checkouts\/xcconfigs\/",
-    "0DE02A0DF2382B61EE0A52E9231D16A8C2823342" : "ContactSyncing\/Carthage\/Checkouts\/ethanol-contacts\/Carthage\/Checkouts\/ethanol-utilities\/",
-    "72F56DC5D5871E0B04EF853262ADF3C062D12674" : "ContactSyncing\/",
-    "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5" : "ContactSyncing\/Carthage\/Checkouts\/ReactiveSwift\/"
+    "35208B909CC6F30C9B16842C4EFCFD7051946857" : "ContactSync\/Carthage\/Checkouts\/ethanol-contacts\/",
+    "490E57B35E951D5E5221A47EAB9C248E2FEBC174" : "ContactSync\/Carthage\/Checkouts\/DataSource\/",
+    "956D2B21DD155C49504BB67697A67F7C5351A353" : "ContactSync\/Carthage\/Checkouts\/Result\/",
+    "E084C86B03F81D63323C9E7510697EA528A758C7" : "ContactSync\/Carthage\/Checkouts\/ReactiveCocoa\/Carthage\/Checkouts\/xcconfigs\/",
+    "0DE02A0DF2382B61EE0A52E9231D16A8C2823342" : "ContactSync\/Carthage\/Checkouts\/ethanol-utilities\/",
+    "72F56DC5D5871E0B04EF853262ADF3C062D12674" : "ContactSync\/",
+    "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5" : "ContactSync\/Carthage\/Checkouts\/ReactiveSwift\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ContactSyncing",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ContactSyncing.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/github.com\/Fueled\/ethanol-utilities.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0DE02A0DF2382B61EE0A52E9231D16A8C2823342"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/github.com\/Fueled\/ethanol-utilities.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",

@@ -7,18 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C6638A41E1FEA57003C1008 /* DataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6638981E1FEA48003C1008 /* DataSource.framework */; };
-		0C6638A51E1FEA57003C1008 /* DataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6638981E1FEA48003C1008 /* DataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0C6638A61E1FEA57003C1008 /* EthanolContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6638991E1FEA48003C1008 /* EthanolContacts.framework */; };
-		0C6638A71E1FEA57003C1008 /* EthanolContacts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6638991E1FEA48003C1008 /* EthanolContacts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0C6638A81E1FEA57003C1008 /* EthanolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389A1E1FEA48003C1008 /* EthanolUtilities.framework */; };
-		0C6638A91E1FEA57003C1008 /* EthanolUtilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389A1E1FEA48003C1008 /* EthanolUtilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0C6638AA1E1FEA57003C1008 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389B1E1FEA48003C1008 /* ReactiveCocoa.framework */; };
-		0C6638AB1E1FEA57003C1008 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389B1E1FEA48003C1008 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0C6638AC1E1FEA57003C1008 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389C1E1FEA48003C1008 /* ReactiveSwift.framework */; };
-		0C6638AD1E1FEA57003C1008 /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389C1E1FEA48003C1008 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0C6638AE1E1FEA57003C1008 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389D1E1FEA48003C1008 /* Result.framework */; };
-		0C6638AF1E1FEA57003C1008 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C66389D1E1FEA48003C1008 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C6638C21E1FF61F003C1008 /* EntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638C11E1FF61F003C1008 /* EntranceViewController.swift */; };
 		0C6638C51E1FF63C003C1008 /* PhoneContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638C41E1FF63C003C1008 /* PhoneContact.swift */; };
 		0C6638C71E1FF828003C1008 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6638C61E1FF828003C1008 /* CreditCard.swift */; };
@@ -30,6 +18,20 @@
 		0C69A7361E251200005A22B5 /* RACTerminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69A7341E251200005A22B5 /* RACTerminal.swift */; };
 		0C69A7381E251444005A22B5 /* EntranceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69A7371E251444005A22B5 /* EntranceViewModel.swift */; };
 		0C69A73E1E255AC9005A22B5 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69A73D1E255AC9005A22B5 /* Array+Extensions.swift */; };
+		0C6C287C1EB37C4600ADD05C /* DataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6C28611EB37C2800ADD05C /* DataSource.framework */; };
+		0C6C287D1EB37C4600ADD05C /* DataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6C28611EB37C2800ADD05C /* DataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6C287E1EB37C4600ADD05C /* EthanolContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6C28621EB37C2800ADD05C /* EthanolContacts.framework */; };
+		0C6C287F1EB37C4600ADD05C /* EthanolContacts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6C28621EB37C2800ADD05C /* EthanolContacts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6C28801EB37C4600ADD05C /* EthanolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6C28631EB37C2800ADD05C /* EthanolUtilities.framework */; };
+		0C6C28811EB37C4600ADD05C /* EthanolUtilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6C28631EB37C2800ADD05C /* EthanolUtilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6C28821EB37C4600ADD05C /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6C28641EB37C2800ADD05C /* ReactiveCocoa.framework */; };
+		0C6C28831EB37C4600ADD05C /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6C28641EB37C2800ADD05C /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6C28841EB37C4600ADD05C /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6C28651EB37C2800ADD05C /* ReactiveSwift.framework */; };
+		0C6C28851EB37C4600ADD05C /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6C28651EB37C2800ADD05C /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6C28861EB37C4600ADD05C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6C28661EB37C2800ADD05C /* Result.framework */; };
+		0C6C28871EB37C4600ADD05C /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6C28661EB37C2800ADD05C /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C6C28881EB37C4600ADD05C /* Pods_ContactSyncing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB3D5B562B9BA95AF69E378 /* Pods_ContactSyncing.framework */; };
+		0C6C28891EB37C4600ADD05C /* Pods_ContactSyncing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABB3D5B562B9BA95AF69E378 /* Pods_ContactSyncing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C9B5B4E1E1FA80F00F7EF7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B5B4D1E1FA80F00F7EF7A /* AppDelegate.swift */; };
 		0C9B5B531E1FA80F00F7EF7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B5B511E1FA80F00F7EF7A /* Main.storyboard */; };
 		0C9B5B551E1FA80F00F7EF7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B5B541E1FA80F00F7EF7A /* Assets.xcassets */; };
@@ -40,7 +42,6 @@
 		0CDDB6881E27EB7600BE8E7E /* SyncProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDB6871E27EB7600BE8E7E /* SyncProtocol.swift */; };
 		0CDDB68C1E27ECB600BE8E7E /* PhoneContact+Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDB68B1E27ECB600BE8E7E /* PhoneContact+Sync.swift */; };
 		0CDDB68E1E27ED3500BE8E7E /* PhoneContact+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDB68D1E27ED3500BE8E7E /* PhoneContact+API.swift */; };
-		6627BDEA0E87083F64C522B0 /* Pods_ContactSyncing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB3D5B562B9BA95AF69E378 /* Pods_ContactSyncing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,18 +62,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0C6638B01E1FEA57003C1008 /* Embed Frameworks */ = {
+		0C6C288A1EB37C4600ADD05C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0C6638A91E1FEA57003C1008 /* EthanolUtilities.framework in Embed Frameworks */,
-				0C6638A51E1FEA57003C1008 /* DataSource.framework in Embed Frameworks */,
-				0C6638AD1E1FEA57003C1008 /* ReactiveSwift.framework in Embed Frameworks */,
-				0C6638AF1E1FEA57003C1008 /* Result.framework in Embed Frameworks */,
-				0C6638A71E1FEA57003C1008 /* EthanolContacts.framework in Embed Frameworks */,
-				0C6638AB1E1FEA57003C1008 /* ReactiveCocoa.framework in Embed Frameworks */,
+				0C6C28891EB37C4600ADD05C /* Pods_ContactSyncing.framework in Embed Frameworks */,
+				0C6C28811EB37C4600ADD05C /* EthanolUtilities.framework in Embed Frameworks */,
+				0C6C287D1EB37C4600ADD05C /* DataSource.framework in Embed Frameworks */,
+				0C6C28851EB37C4600ADD05C /* ReactiveSwift.framework in Embed Frameworks */,
+				0C6C28871EB37C4600ADD05C /* Result.framework in Embed Frameworks */,
+				0C6C287F1EB37C4600ADD05C /* EthanolContacts.framework in Embed Frameworks */,
+				0C6C28831EB37C4600ADD05C /* ReactiveCocoa.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,12 +82,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0C6638981E1FEA48003C1008 /* DataSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DataSource.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/DataSource.framework"; sourceTree = "<group>"; };
-		0C6638991E1FEA48003C1008 /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolContacts.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/EthanolContacts.framework"; sourceTree = "<group>"; };
-		0C66389A1E1FEA48003C1008 /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUtilities.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/EthanolUtilities.framework"; sourceTree = "<group>"; };
-		0C66389B1E1FEA48003C1008 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/ReactiveCocoa.framework"; sourceTree = "<group>"; };
-		0C66389C1E1FEA48003C1008 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/ReactiveSwift.framework"; sourceTree = "<group>"; };
-		0C66389D1E1FEA48003C1008 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "../../../Library/Developer/Xcode/DerivedData/ContactSyncing-dqtpnuheyqxqbyaqibqhmzjpkytx/Build/Products/Debug-iphoneos/Result.framework"; sourceTree = "<group>"; };
+		0C6638981E1FEA48003C1008 /* DataSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DataSource.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
+		0C6638991E1FEA48003C1008 /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolContacts.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
+		0C66389A1E1FEA48003C1008 /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUtilities.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
+		0C66389B1E1FEA48003C1008 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
+		0C66389C1E1FEA48003C1008 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveSwift.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
+		0C66389D1E1FEA48003C1008 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
 		0C6638C11E1FF61F003C1008 /* EntranceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntranceViewController.swift; path = Controllers/EntranceViewController.swift; sourceTree = "<group>"; };
 		0C6638C41E1FF63C003C1008 /* PhoneContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneContact.swift; path = Models/PhoneContact.swift; sourceTree = "<group>"; };
 		0C6638C61E1FF828003C1008 /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreditCard.swift; path = Models/CreditCard.swift; sourceTree = "<group>"; };
@@ -97,6 +99,20 @@
 		0C69A7341E251200005A22B5 /* RACTerminal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RACTerminal.swift; path = Helpers/Extensions/RACTerminal.swift; sourceTree = "<group>"; };
 		0C69A7371E251444005A22B5 /* EntranceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntranceViewModel.swift; path = Controllers/EntranceViewModel.swift; sourceTree = "<group>"; };
 		0C69A73D1E255AC9005A22B5 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Extensions.swift"; path = "Helpers/Extensions/Array+Extensions.swift"; sourceTree = "<group>"; };
+		0C6C28401EB3792800ADD05C /* DataSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DataSource.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
+		0C6C28411EB3792800ADD05C /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolContacts.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
+		0C6C28421EB3792800ADD05C /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EthanolUtilities.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
+		0C6C28431EB3792800ADD05C /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
+		0C6C28441EB3792800ADD05C /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveSwift.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
+		0C6C28451EB3792800ADD05C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
+		0C6C28461EB3792800ADD05C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-fnhlnlcwwerdpbcbuuyypzlfijty/Build/Products/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
+		0C6C28471EB3792800ADD05C /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = WORKSPACE_FRAMEWORK_BUILT_PRODUCTS_DIR; };
+		0C6C28611EB37C2800ADD05C /* DataSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DataSource.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-fnhlnlcwwerdpbcbuuyypzlfijty/Build/Products/Debug-iphoneos/DataSource.framework"; sourceTree = "<group>"; };
+		0C6C28621EB37C2800ADD05C /* EthanolContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolContacts.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-fnhlnlcwwerdpbcbuuyypzlfijty/Build/Products/Debug-iphoneos/EthanolContacts.framework"; sourceTree = "<group>"; };
+		0C6C28631EB37C2800ADD05C /* EthanolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthanolUtilities.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-fnhlnlcwwerdpbcbuuyypzlfijty/Build/Products/Debug-iphoneos/EthanolUtilities.framework"; sourceTree = "<group>"; };
+		0C6C28641EB37C2800ADD05C /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-fnhlnlcwwerdpbcbuuyypzlfijty/Build/Products/Debug-iphoneos/ReactiveCocoa.framework"; sourceTree = "<group>"; };
+		0C6C28651EB37C2800ADD05C /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-fnhlnlcwwerdpbcbuuyypzlfijty/Build/Products/Debug-iphoneos/ReactiveSwift.framework"; sourceTree = "<group>"; };
+		0C6C28661EB37C2800ADD05C /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "../../Library/Developer/Xcode/DerivedData/ContactSyncing-fnhlnlcwwerdpbcbuuyypzlfijty/Build/Products/Debug-iphoneos/Result.framework"; sourceTree = "<group>"; };
 		0C9B5B4A1E1FA80F00F7EF7A /* ContactSyncing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactSyncing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9B5B4D1E1FA80F00F7EF7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C9B5B521E1FA80F00F7EF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,13 +139,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C6638A81E1FEA57003C1008 /* EthanolUtilities.framework in Frameworks */,
-				0C6638A41E1FEA57003C1008 /* DataSource.framework in Frameworks */,
-				0C6638AC1E1FEA57003C1008 /* ReactiveSwift.framework in Frameworks */,
-				0C6638AE1E1FEA57003C1008 /* Result.framework in Frameworks */,
-				0C6638A61E1FEA57003C1008 /* EthanolContacts.framework in Frameworks */,
-				0C6638AA1E1FEA57003C1008 /* ReactiveCocoa.framework in Frameworks */,
-				6627BDEA0E87083F64C522B0 /* Pods_ContactSyncing.framework in Frameworks */,
+				0C6C28881EB37C4600ADD05C /* Pods_ContactSyncing.framework in Frameworks */,
+				0C6C28801EB37C4600ADD05C /* EthanolUtilities.framework in Frameworks */,
+				0C6C287C1EB37C4600ADD05C /* DataSource.framework in Frameworks */,
+				0C6C28841EB37C4600ADD05C /* ReactiveSwift.framework in Frameworks */,
+				0C6C28861EB37C4600ADD05C /* Result.framework in Frameworks */,
+				0C6C287E1EB37C4600ADD05C /* EthanolContacts.framework in Frameworks */,
+				0C6C28821EB37C4600ADD05C /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +169,20 @@
 		0C1BE5501E1FB4C00030BFF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C6C28611EB37C2800ADD05C /* DataSource.framework */,
+				0C6C28621EB37C2800ADD05C /* EthanolContacts.framework */,
+				0C6C28631EB37C2800ADD05C /* EthanolUtilities.framework */,
+				0C6C28641EB37C2800ADD05C /* ReactiveCocoa.framework */,
+				0C6C28651EB37C2800ADD05C /* ReactiveSwift.framework */,
+				0C6C28661EB37C2800ADD05C /* Result.framework */,
+				0C6C28401EB3792800ADD05C /* DataSource.framework */,
+				0C6C28411EB3792800ADD05C /* EthanolContacts.framework */,
+				0C6C28421EB3792800ADD05C /* EthanolUtilities.framework */,
+				0C6C28431EB3792800ADD05C /* ReactiveCocoa.framework */,
+				0C6C28441EB3792800ADD05C /* ReactiveSwift.framework */,
+				0C6C28451EB3792800ADD05C /* Realm.framework */,
+				0C6C28461EB3792800ADD05C /* RealmSwift.framework */,
+				0C6C28471EB3792800ADD05C /* Result.framework */,
 				0C6638981E1FEA48003C1008 /* DataSource.framework */,
 				0C6638991E1FEA48003C1008 /* EthanolContacts.framework */,
 				0C66389A1E1FEA48003C1008 /* EthanolUtilities.framework */,
@@ -331,9 +361,9 @@
 				0C9B5B461E1FA80F00F7EF7A /* Sources */,
 				0C9B5B471E1FA80F00F7EF7A /* Frameworks */,
 				0C9B5B481E1FA80F00F7EF7A /* Resources */,
-				0C6638B01E1FEA57003C1008 /* Embed Frameworks */,
 				6FC25CCDC275AD61E5F00E3F /* [CP] Embed Pods Frameworks */,
 				1774BF807C62049C45EE94B3 /* [CP] Copy Pods Resources */,
+				0C6C288A1EB37C4600ADD05C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
