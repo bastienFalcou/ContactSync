@@ -11,6 +11,7 @@ import RealmSwift
 
 final class PhoneContact: Object {
 	// Properties
+	dynamic var identifier: String = ""
 	dynamic var phoneNumber: String = ""
 	dynamic var username: String = ""
 
@@ -18,7 +19,7 @@ final class PhoneContact: Object {
 	fileprivate let creditCards = List<CreditCard>()
 
 	override static func primaryKey() -> String? {
-		return "phoneNumber"
+		return "identifier"
 	}
 
 	static func allPhoneContacts(in realm: Realm = RealmManager.shared.realm) -> [PhoneContact] {
